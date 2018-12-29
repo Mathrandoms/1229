@@ -1,0 +1,83 @@
+@import "_mixin.scss";
+@import "common.scss";
+.content {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: #000;
+    color: #fff;
+    padding: 0 pxTorem(15px);
+    @include sizing;
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    div {
+        @include box_flex;
+        >.icon {
+            font-size: pxTorem(16px);
+            color: #fff;
+        }
+        span {
+            font-size: pxTorem(12px);
+            margin-left: pxTorem(10px);
+        }
+    }
+    h3 {
+        font-size: pxTorem(18px);
+    }
+    >span {
+        font-size: pxTorem(18px);
+        margin-bottom: pxTorem(8px);
+        font-weight: 900;
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+    .dz {
+        width: 100%;
+        height: pxTorem(40px);
+        background: #333;
+        padding: pxTorem(15px);
+        color: #ccc;
+        @include box_flex;
+        @include align;
+        @include sizing;
+        .icon {
+            font-size: pxTorem(16px);
+        }
+        p {
+            margin-left: pxTorem(10px);
+            font-size: pxTorem(16px);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(50px);
+    @include box_flex;
+    dl {
+        @include box_flex;
+        @include direction(column);
+        @include flex;
+        @include justify;
+        @include align;
+        background: #0f0;
+        dt {
+            .icon {
+                font-size: pxTorem(16px);
+            }
+        }
+        dd {
+            font-size: pxTorem(14px);
+        }
+    }
+}
